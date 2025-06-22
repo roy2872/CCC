@@ -1,0 +1,24 @@
+package org.example;
+
+public enum UpgradeType {
+    CURSOR,
+    GRANDMA,
+    FARM,
+    FACTORY,
+    MINE,
+    BANK,
+    TEMPLE,
+    WIZARD_TOWER,
+    SHIPMENT,
+    ALCHEMY_LAB,
+    PORTAL,
+    TIME_MACHINE,
+    ANTIMATTER_CONDENSER,
+    PRISM,
+    CHANCEMAKER,
+    FRACTAL_ENGINE,
+    JAVASCRIPT_CONSOLE,
+    IDLEVERSE,
+    CORTEX_BAKER,
+    YOU
+}
