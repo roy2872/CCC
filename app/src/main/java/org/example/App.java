@@ -122,7 +122,7 @@ public class App extends PApplet {
                 }
             }
         } else if (mouseX >= 0 && mouseX <= 50 && mouseY >= 550 && mouseY <= 600) {
-            SaveManager.save(new GameState());
+            SaveManager.save(GameState.newDefaultState());
             println("Game reset!");
             System.exit(0);
         }
