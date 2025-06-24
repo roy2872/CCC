@@ -12,6 +12,9 @@ public class App extends PApplet {
     float scrollY = 0;
     float scrollSpeed = 20;
 
+    int lastAutoSaveTime = 0;
+    int autoSaveInterval = 600000;
+
     int cookieX = canvasWidth / 2 - canvasWidth / 3;
     int cookieY = canvasHeight / 2;
     float size = 200;
@@ -35,11 +38,17 @@ public class App extends PApplet {
 
     @Override
     public void draw() {
+
         int currentTime = millis();
         if (currentTime - lastTickTime >= 100) {
             lastTickTime = currentTime;
             cookieCount += passiveCookies / 10;
             totalEarned += passiveCookies / 10;
+        }
+        if (currentTime - lastAutoSaveTime >= autoSaveInterval) {
+            lastAutoSaveTime = currentTime;
+            SaveManager.save(gameState);
+            println("Auto-saved game.");
         }
 
         background(255);
